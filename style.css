@@ -169,12 +169,20 @@ header h1 {
   text-align: center; /* Выравнивание по центру */
 }
 
+.logo {
+  width: 100%;                  /* Занимает всю ширину экрана на мобильных */
+  max-width: var(--main-width); /* Не растет больше заданного максимума на ПК */
+  box-sizing: border-box;       /* Чтобы padding не распирал экран */
+  padding: 0;
+  margin: 0 auto;
+}
+
 .logo-img {
   width: 100%;
   max-width: var(--main-width);
   height: auto;
   display: block;
-  margin: 15px auto;
+  margin: 10px auto;
 }
 
 .centered-img {
