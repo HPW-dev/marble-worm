@@ -1,0 +1,13 @@
+# Разрешаем индексировать основные страницы в корне и запрещаем остальное 
+User-agent: *
+Allow: /$
+
+Allow: /*.html
+Allow: /traditional/
+Allow: /digital/
+
+Disallow: /*.py$
+
+Crawl-delay: 2
+Sitemap: https://marble-worm.website.yandexcloud.net/sitemap.xml
+Host: https://marble-worm.website.yandexcloud.net

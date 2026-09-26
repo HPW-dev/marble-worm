@@ -1,0 +1,191 @@
+@charset "UTF-8";
+
+:root {
+  --link-color: #ff3c3c;
+  --link-color-hover: white;
+
+  --back: #ff3c3c;
+  --back-hover: white;
+
+  --main-text: #DDDDDD;
+  --main-bg: black;
+  --main-font: 'Fira Code', 'Fira Code Variable', 'Consolas', monospace;
+  --main-font-sz: 16px;
+  --main-padding: 20px;
+  --main-line-height: 1.4;
+  --main-width: 1024px;
+}
+
+@font-face {
+  font-family: 'Fira Code Variable';
+  src: url('fonts/FiraCode-VF.woff2') format('woff2');
+  /* Диапазон доступного веса для вариативного Fira Code */
+  font-weight: 300 700; 
+  font-style: normal;
+  /* заставляет браузер сразу показать стандартный шрифт, 
+  а после загрузки файла — заменить его на кастомный */
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+summary {
+  color: var(--link-color);
+  cursor: grab;
+}
+
+details {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+body {
+  background-color: var(--main-bg);
+  color: var(--main-text);
+  font-family: var(--main-font);
+  font-variant-ligatures: contextual;
+  font-size: var(--main-font-sz);
+  line-height: var(--main-line-height);
+  padding: var(--main-padding);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a:hover {
+  color: var(--link-color-hover);
+  text-decoration: underline; /* Возвращает подчеркивание при наведении */
+  font-weight: bold;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+        
+.main, main, header {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: var(--main-width);
+}
+
+main {
+  flex: 1;
+}
+
+h1 {
+  color: white;
+  margin-bottom: 7px;
+  font-size: 32px;
+}
+
+header h1 {
+  text-align: center;
+}
+
+.back {
+  margin-top: 10px;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: var(--main-width);
+}
+
+.back a {
+  color: var(--back);
+  text-decoration: none;
+}
+
+.back a:hover {
+  color: var(--back-hover);
+  text-decoration: underline;
+}
+
+.menu {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 20px;
+  max-width: fit-content;
+}
+.menu li::before {
+  content: "->";
+  margin-right: 10px;
+  color: oklch(0.135% 1 30)
+}
+
+.footer-style {
+  padding: 40px 0;
+  display: flex;
+  justify-content: space-between; /* Распределяет колонки по краям */
+  flex-wrap: wrap;                /* Переносит колонки на мобильных */
+  max-width: var(--main-width);
+  margin: 0 auto;
+  color: hsl(0, 0%, 41%);
+}
+
+.about-site li {
+  margin-top: 15px;
+}
+
+.about-site h2 {
+  color: oklch(1 0.5 90);
+}
+
+.copy-btn {
+  background:none;
+  border:none;
+  color:var(--link-color);
+  font:inherit;
+  cursor:pointer;
+}
+
+/* ------------------------ пикчи ------------------------------------------- */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 7px;          /* Расстояние между картинками */
+  max-width: var(--main-width);
+  margin: 15px auto;  /* Центрируем галерею на странице */
+}
+
+.gallery-img {
+  width: 100%;
+  height: 160px;
+  object-fit: contain; /* Картинка полностью помещается в блок, пропорции сохранены */
+  background-color: hsl(0 0% 6%); /* Задаем фоновый цвет для пустых полей вместо черного фона сайта */
+}
+
+.gallery-desc {
+  margin-top: 5px;    /* Отступ сверху от картинки */
+  font-size: 14px;    /* Размер шрифта */
+  color: #cccccc;   /* Цвет текста */
+  text-align: center; /* Выравнивание по центру */
+}
+
+.logo-img {
+  width: 100%;
+  max-width: var(--main-width);
+  height: auto;
+  display: block;
+  margin: 15px auto;
+}
+
+.centered-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.centered-img img {
+  padding: 0px;
+  margin: 15px;
+  border: 1px solid #3C3C3C;
+  max-width: 100%;
+  height: auto;
+}

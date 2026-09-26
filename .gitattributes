@@ -1,0 +1,28 @@
+*.ttf binary
+*.otf binary
+
+*.exe binary
+*.elf binary
+*.elf64 binary
+*.elf32 binary
+
+*.bin binary
+*.dat binary
+
+*.7z binary
+*.tar.bz binary
+*.tar binary
+*.tar.xz binary
+*.zip binary
+*.rar binary
+*.zst binary
+*.AppImage binary
+
+*.mp3 binary
+*.mp4 binary
+*.webm binary
+*.webp binary
+*.gif binary
+*.jpg binary
+*.jpeg binary
+*.png binary
